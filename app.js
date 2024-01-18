@@ -3,7 +3,7 @@ require("dotenv").config();
 const app = express();
 const path = require("path");
 
-app.use(express.static(path.join(__dirname, "/node_modules/bootstrap/dist")));
+app.use(express.static(path.join(__dirname, "/node_modules/bootstrap/")));
 app.use("/public", express.static(path.join(__dirname, "/public")));
 
 app.get("/:id", (req, res) =>
